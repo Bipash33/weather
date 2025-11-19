@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Correct CSS link -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Weather Application</h1>
+    <!-- Container for all content -->
+    <div class="container">
 
-    <!-- Search Bar Section -->
-    <div class="search-section">
-        <!-- 1️⃣ Input field -->
-        <input type="text" id="city-input" placeholder="Enter city name" />
+        <h1>Weather Application</h1>
 
-        <!-- 2️⃣ Search button -->
-        <button id="search-btn">Search</button>
+        <!-- Search Section -->
+        <div class="search-section">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <!-- Weather Info Section -->
+        <div class="weather-info">
+            <p id="city-name"></p>
+            <p id="temperature"></p>
+            <p id="weather-description"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+        </div>
+
     </div>
 
-    <!-- Weather Display Section -->
-    <div class="weather-info">
-        <!-- 3️⃣ Weather result elements -->
-        <p id="city-name"></p>
-        <p id="temperature"></p>
-        <p id="weather-description"></p>
-
-        <!-- 4️⃣ Additional placeholder element -->
-        <p id="humidity"></p>
-
-        <!-- 5️⃣ Another placeholder element -->
-        <p id="wind-speed"></p>
-    </div>
-
-    <script src="js/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
