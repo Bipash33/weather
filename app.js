@@ -6,20 +6,18 @@ async function fetchWeather(city) {
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        console.log("Weather data:", data);
 
-        // TODO: update your HTML with city, temp, etc.
+        // Insert into correct HTML IDs
+        document.getElementById("city-name").innerText = data.name;
+        document.getElementById("temperature").innerText = data.main.temp + "°C";
+        document.getElementById("weather-description").innerText = data.weather[0].description;
+        document.getElementById("humidity").innerText = "Humidity: " + data.main.humidity + "%";
+        document.getElementById("wind-speed").innerText = "Wind Speed: " + data.wind.speed + " m/s";
+
     } catch (error) {
-        console.error("Error fetching weather data:", error);
+        console.error("Error fetching weather:", error);
     }
 }
-
-document.getElementById('search-btn').addEventListener('click', function() {
-    const city = document.getElementById('city-input').value;
-    console.log('City entered:', city);
-
-    // Additional code for API will be added later
-});
 
 document.getElementById("search-btn").addEventListener("click", () => {
     const city = document.getElementById("city-input").value;
